@@ -6,8 +6,8 @@ var output = document.getElementById('output');
 var container = document.querySelector('.container');
 
 function calculateProfitOrLoss(initial, quantity, current) {
-     var difference= quantity * (current - initial);
-     var diffPercentage = (difference / initial) * 100;
+     var difference= (quantity * (current - initial)).toFixed(2);
+     var diffPercentage = ((difference / initial) * 100).toFixed(2);
      
      if(difference > 0) {
         output.innerText = `Hey the profit is ${difference} and percent is ${diffPercentage} %`;
